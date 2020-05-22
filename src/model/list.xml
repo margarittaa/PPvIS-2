@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+<sportsman>
+	<fio>Иванов Иван Иванович</fio>
+	<composition>основной</composition>
+	<position>защитник</position>
+	<titles>10</titles>
+	<sport>футбол</sport>
+	<category>2-й разряд</category>
+</sportsman>
+<sportsman>
+	<fio>Семенов Виктор Витальевич</fio>
+	<composition>запасной</composition>
+	<position>пасующий</position>
+	<titles>2</titles>
+	<sport>волейбол</sport>
+	<category>1-й юношеский</category>
+</sportsman>
+<sportsman>
+	<fio>Петров Петр Петрович</fio>
+	<composition>запасной</composition>
+	<position>атакующий защитник</position>
+	<titles>9</titles>
+	<sport>баскетбол</sport>
+	<category>2-й разряд</category>
+</sportsman>
+<sportsman>
+	<fio>Солнышкин Валерий Никифорович</fio>
+	<composition>основной</composition>
+	<position>нападающий</position>
+	<titles>11</titles>
+	<sport>хоккей</sport>
+	<category>кмс</category>
+</sportsman>
+<sportsman>
+	<fio>Ромашкина Анастасия Артёмовна</fio>
+	<composition>n/a</composition>
+	<position>полузащитник</position>
+	<titles>5</titles>
+	<sport>футбол</sport>
+	<category>2-й разряд</category>
+</sportsman>
+<sportsman>
+	<fio>Звездочкин Валентин Иванович</fio>
+	<composition>основной</composition>
+	<position>центральный</position>
+	<titles>2</titles>
+	<sport>баскетбол</sport>
+	<category>1-й юношеский</category>
+</sportsman>
+<sportsman>
+	<fio>Мятный Антон Петрович</fio>
+	<composition>запасной</composition>
+	<position>нападающий</position>
+	<titles>16</titles>
+	<sport>волейбол</sport>
+	<category>2-й разряд</category>
+</sportsman>
+<sportsman>
+	<fio>Семенов Семен Павлович</fio>
+	<composition>основной</composition>
+	<position>пасующий</position>
+	<titles>20</titles>
+	<sport>волейбол</sport>
+	<category>3й-разряд</category>
+</sportsman>
+<sportsman>
+	<fio>Песочная Анна Валентиновна</fio>
+	<composition>основной</composition>
+	<position>вратарь</position>
+	<titles>8</titles>
+	<sport>хоккей</sport>
+	<category>2-й разряд</category>
+</sportsman>
+<sportsman>
+	<fio>Белый Дмитрий Иванович</fio>
+	<composition>запасной</composition>
+	<position>вратарь</position>
+	<titles>14</titles>
+	<sport>футбол</sport>
+	<category>кмс</category>
+</sportsman>
+<sportsman>
+	<fio>Широкий Никодим Витальевич</fio>
+	<composition>запасной</composition>
+	<position>защитник</position>
+	<titles>12</titles>
+	<sport>футбол</sport>
+	<category>3й-разряд</category>
+</sportsman>
+<sportsman>
+	<fio>Узкий Ян Никифорович</fio>
+	<composition>основной</composition>
+	<position>атакующий защитник</position>
+	<titles>12</titles>
+	<sport>баскетбол</sport>
+	<category>кмс</category>
+</sportsman>
+<sportsman>
+	<fio>Серенький Максим Олегович</fio>
+	<composition>n/a</composition>
+	<position>вратарь</position>
+	<titles>9</titles>
+	<sport>гандбол</sport>
+	<category>кмс</category>
+</sportsman>
+<sportsman>
+	<fio>Шпак Семен Николаевич</fio>
+	<composition>основной</composition>
+	<position>пасующий</position>
+	<titles>18</titles>
+	<sport>волейбол</sport>
+	<category>мастер спорта</category>
+</sportsman>
+<sportsman>
+	<fio>Малышкин Иван Викторович</fio>
+	<composition>n/a</composition>
+	<position>центральный</position>
+	<titles>15</titles>
+	<sport>баскетбол</sport>
+	<category>кмс</category>
+</sportsman>
+<sportsman>
+	<fio>Петрович Инна Захаровна</fio>
+	<composition>запасной</composition>
+	<position>полузащитник</position>
+	<titles>35</titles>
+	<sport>футбол</sport>
+	<category>мастер спорта</category>
+</sportsman>
+<sportsman>
+	<fio>Ястребов Александр Фмлиппович</fio>
+	<composition>запасной</composition>
+	<position>пасующий</position>
+	<titles>16</titles>
+	<sport>волейбол</sport>
+	<category>2-й разряд</category>
+</sportsman>
+<sportsman>
+	<fio>Высокий Ульян Павлович</fio>
+	<composition>запасной</composition>
+	<position>нападающий</position>
+	<titles>9</titles>
+	<sport>футбол</sport>
+	<category>2-й разряд</category>
+</sportsman>
+<sportsman>
+	<fio>Семенов Иван Александрович</fio>
+	<composition>n/a</composition>
+	<position>защитник</position>
+	<titles>10</titles>
+	<sport>хоккей</sport>
+	<category>кмс</category>
+</sportsman>
+<sportsman>
+	<fio>Лютый Дмитрий Иванович</fio>
+	<composition>запасной</composition>
+	<position>центральный</position>
+	<titles>8</titles>
+	<sport>баскетбол</sport>
+	<category>2-й разряд</category>
+</sportsman>
+<sportsman>
+	<fio>Цветков Никита Сергеевич</fio>
+	<composition>основной</composition>
+	<position>нападающий</position>
+	<titles>1</titles>
+	<sport>гандбол</sport>
+	<category>1-й юношеский</category>
+</sportsman>
+<sportsman>
+	<fio>Ерёмина Светлана Андреевна</fio>
+	<composition>основной</composition>
+	<position>пасующий</position>
+	<titles>10</titles>
+	<sport>волейбол</sport>
+	<category>кмс</category>
+</sportsman>
+<sportsman>
+	<fio>Ёшкин Артур Васильевич</fio>
+	<composition>запасной</composition>
+	<position>пасующий</position>
+	<titles>11</titles>
+	<sport>волейбол</sport>
+	<category>1-й юношеский</category>
+</sportsman>
+<sportsman>
+	<fio>Михалков Афанасий Павлович</fio>
+	<composition>основной</composition>
+	<position>полузащитник</position>
+	<titles>18</titles>
+	<sport>футбол</sport>
+	<category>кмс</category>
+</sportsman>
+<sportsman>
+	<fio>Спортивный Андрей Артурович</fio>
+	<composition>n/a</composition>
+	<position>нападающий</position>
+	<titles>9</titles>
+	<sport>волейбол</sport>
+	<category>кмс</category>
+</sportsman>
+<sportsman>
+	<fio>Васькина Мария Станиславовна</fio>
+	<composition>запасной</composition>
+	<position>атакующий защитник</position>
+	<titles>13</titles>
+	<sport>баскетбол</sport>
+	<category>1-й юношеский</category>
+</sportsman>
+<sportsman>
+	<fio>Зубенко Михаил Петрович</fio>
+	<composition>n/a</composition>
+	<position>нападающий</position>
+	<titles>19</titles>
+	<sport>футбол</sport>
+	<category>кмс</category>
+</sportsman>
+<sportsman>
+	<fio>Мирный Андрей Валентинович</fio>
+	<composition>основной</composition>
+	<position>нападающий</position>
+	<titles>32</titles>
+	<sport>гандбол</sport>
+	<category>мастер спорта</category>
+</sportsman>
+<sportsman>
+	<fio>Острая Анна Дмитриевна</fio>
+	<composition>запасной</composition>
+	<position>нападающий</position>
+	<titles>4</titles>
+	<sport>волейбол</sport>
+	<category>1-й юношеский</category>
+</sportsman>
+<sportsman>
+	<fio>Цапелькин Иван Васильевич</fio>
+	<composition>основной</composition>
+	<position>защитник</position>
+	<titles>11</titles>
+	<sport>футбол</sport>
+	<category>1-й юношеский</category>
+</sportsman>
+<sportsman>
+	<fio>Чапелькин Алексей Олегович</fio>
+	<composition>запасной</composition>
+	<position>защитник</position>
+	<titles>14</titles>
+	<sport>футбол</sport>
+	<category>кмс</category>
+</sportsman>
+<sportsman>
+	<fio>Филипенко Игнат Викторович</fio>
+	<composition>n/a</composition>
+	<position>атакующий защитник</position>
+	<titles>19</titles>
+	<sport>баскетбол</sport>
+	<category>1-й юношеский</category>
+</sportsman>
+<sportsman>
+	<fio>Миленко Владислав Анатольевич</fio>
+	<composition>n/a</composition>
+	<position>защитник</position>
+	<titles>3</titles>
+	<sport>хоккей</sport>
+	<category>кмс</category>
+</sportsman>
+<sportsman>
+	<fio>Ясный Максим Дмитриевич</fio>
+	<composition>запасной</composition>
+	<position>защитник</position>
+	<titles>2</titles>
+	<sport>футбол</sport>
+	<category>3-й разряд</category>
+</sportsman>
+<sportsman>
+	<fio>Лиловая Марина Викторовна</fio>
+	<composition>запасной</composition>
+	<position>центральный</position>
+	<titles>2</titles>
+	<sport>баскетбол</sport>
+	<category>3-й разряд</category>
+</sportsman>
+
+</list>
