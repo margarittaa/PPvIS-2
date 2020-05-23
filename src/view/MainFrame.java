@@ -41,7 +41,7 @@ public class MainFrame {
 	};
 	
 	public static void CreateGUI() {
-		frame = new JFrame("Task");		
+		frame = new JFrame("Спортсмены");		
     	panel = new JPanel();
 	    panel.setLayout(null);
 	    
@@ -61,8 +61,7 @@ public class MainFrame {
         addButton = new JButton("Добавить запись");
         deleteButton = new JButton("Удалить запись"); 
         searchButton = new JButton("Поиск");  
-        writeFileButton = new JButton("Записать в файл");  
-          
+        writeFileButton = new JButton("Записать в файл");            
         
         panel.add(parseButton);
         panel.add(addButton); 
@@ -82,19 +81,6 @@ public class MainFrame {
 	    frame.add(panel);	 
 		frame.setVisible(true);
 	    frame.setLocationRelativeTo(null); 
-	}
-	
-	
-	public static void addDialog() {
-		Object[] columns = {"ФИО", "Состав", "Позиция", "Титулы", "Вид спорта", "Разряд"};
-        model = new DefaultTableModel();
-        model.setColumnIdentifiers(columns);        
-        JTable table = new JTable(model);
-        
-        JScrollPane pane = new JScrollPane(table);
-        pane.setBounds(50, 0, 900, 23);               
-        panel.add(pane);
-        table.setBounds(220, 180, 500, 30);
 	}
 
 }

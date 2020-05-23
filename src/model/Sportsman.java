@@ -45,9 +45,5 @@ public class Sportsman {
 		this.category = category;
 	}
 	
-	public void printProperties() {
-		System.out.println(FIO + "  " + composition + "  " + position + "  " + titles);
-	}
-	
 }
 

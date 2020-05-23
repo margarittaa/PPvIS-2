@@ -151,21 +151,21 @@ public class Listeners {
         	
         	for(int i = 0; i < Data.sportsmenList.size(); i++){
         		Sportsman s = Data.sportsmenList.get(i);
-        		if((!FIO.equals("") || !sport.equals(""))
-        			&& titlesFrom.equals("") && titlesTo.equals("") && category.equals("")) {
+        		if((!FIO.isEmpty() || !sport.isEmpty())
+        			&& titlesFrom.isEmpty() && titlesTo.isEmpty() && category.isEmpty()) {
         			if(FIO.equals(s.getFIO()) || sport.equals(s.getSport())) {
         				Data.sportsmenList.remove(i);
         				counter++;
         			}
         		}
-        		else if(!titlesFrom.equals("") && !titlesTo.equals("") && category.equals("") && FIO.equals("") && sport.equals("")) {
+        		else if(!titlesFrom.isEmpty() && !titlesTo.isEmpty() && category.isEmpty() && FIO.isEmpty() && sport.isEmpty()) {
         			if(s.getTitles() > Integer.parseInt(titlesFrom) && s.getTitles() < Integer.parseInt(titlesTo)) {
         				Data.sportsmenList.remove(i);
         				counter++;
         			}
         		}
-        		else if((!FIO.equals("") || !category.equals(""))
-            			&& titlesFrom.equals("") && titlesTo.equals("") && sport.equals("")) {
+        		else if((!FIO.isEmpty() || !category.isEmpty())
+            			&& titlesFrom.isEmpty() && titlesTo.isEmpty() && sport.isEmpty()) {
         				if(FIO.equals(s.getFIO()) || category.equals(s.getCategory())) {
         					Data.sportsmenList.remove(i);
             				counter++;
@@ -180,7 +180,7 @@ public class Listeners {
         		if(counter == 0)
         			JOptionPane.showMessageDialog(DeleteDialog.deleteDialog, "Записи с указанными фильтрами не найдены");
         		else 
-        			JOptionPane.showMessageDialog(DeleteDialog.deleteDialog, "Удалено " + counter + " записи");
+        			JOptionPane.showMessageDialog(DeleteDialog.deleteDialog, "Удалено " + counter + " записей");
         	}
         	else {
         		JOptionPane.showMessageDialog(DeleteDialog.deleteDialog, "Условия поиска и удаления:\r\n" + 
@@ -188,7 +188,6 @@ public class Listeners {
     					"-	по количеству завоеваний титула;\r\n" + 
     					"-	по фио или разряду.");
         	}
-        	
         	
         }
     };

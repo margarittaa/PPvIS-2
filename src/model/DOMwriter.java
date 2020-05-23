@@ -23,15 +23,10 @@ public class DOMwriter{
 		Element list = document.createElement("list");
 		document.appendChild(list);
 		
-		 Data.sportsmenList.forEach((s)->{
-			 
+		 Data.sportsmenList.forEach((s)->{			 
 		 
 		Element sportsman = document.createElement("sportsman");
 		list.appendChild(sportsman);
-		
-		Attr id = document.createAttribute("id");
-		id.setTextContent("1");
-		sportsman.setAttributeNode(id);
 		
 		Element fio = document.createElement("fio"); 
 		fio.setTextContent(s.getFIO());
@@ -49,8 +44,7 @@ public class DOMwriter{
 		
 		Transformer transformer = TransformerFactory.newInstance().newTransformer(); 
 		DOMSource source = new DOMSource(document); 
-		StreamResult result = new StreamResult(
-				new File(System.getProperty("user.dir") + File.separator + fileName));
+		StreamResult result = new StreamResult(new File(System.getProperty("user.dir") + File.separator + fileName));
 				transformer.transform(source, result);
 				System.out.println("Document " + fileName +  " saved");
 		
