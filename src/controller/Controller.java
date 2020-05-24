@@ -19,23 +19,19 @@ public class Controller {
 		AddDialog.addRowButton.addActionListener(Listeners.addRowListener);
 		SearchDialog.searchButton.addActionListener(Listeners.searchRowsListener);
 		DeleteDialog.deleteButton.addActionListener(Listeners.deleteRowsListener);
+		
+		PageController.startPageControl();
 	}
 	
-	 public static void pushDataToModel(Sportsman s, DefaultTableModel model) {	
-			Object[] row = new Object[6];
-	        row[0] = s.getFIO();
-	        row[1] = s.getComposition();
-	        row[2] = s.getPosition();
-	        row[3] = s.getTitles();
-	        row[4] = s.getSport();
-	        row[5] = s.getCategory();
-	        model.addRow(row);			
-	}
-
-	 static void refreshTableModel(DefaultTableModel model) {
-		model.setRowCount(0);
-     	Data.sportsmenList.forEach((s) -> {Controller.pushDataToModel(s, model);});
-	 }
-	
+	public static void pushDataToModel(Sportsman s, DefaultTableModel model) {	
+		Object[] row = new Object[6];
+        row[0] = s.getFIO();
+        row[1] = s.getComposition();
+        row[2] = s.getPosition();
+        row[3] = s.getTitles();
+        row[4] = s.getSport();
+        row[5] = s.getCategory();
+        model.addRow(row);			
+	}	
 	
 }

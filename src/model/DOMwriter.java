@@ -14,39 +14,49 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 public class DOMwriter{
-	
-	private static String fileName = "list.xml";
-	
-	public static void mainDOMwriter() throws ParserConfigurationException, TransformerFactoryConfigurationError, TransformerException {
+		
+	public static void mainDOMwriter(File file) throws ParserConfigurationException, TransformerFactoryConfigurationError, TransformerException {
 		Document document = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
 		
 		Element list = document.createElement("list");
 		document.appendChild(list);
 		
-		 Data.sportsmenList.forEach((s)->{			 
+		Data.sportsmenList.forEach((s)->{			 
 		 
-		Element sportsman = document.createElement("sportsman");
-		list.appendChild(sportsman);
+			Element sportsman = document.createElement("sportsman");
+			list.appendChild(sportsman);
 		
-		Element fio = document.createElement("fio"); 
-		fio.setTextContent(s.getFIO());
-		sportsman.appendChild(fio);
+			Element fio = document.createElement("fio"); 
+			fio.setTextContent(s.getFIO());
+			sportsman.appendChild(fio);
+			
+			Element composition = document.createElement("composition"); 
+			composition.setTextContent(s.getComposition());
+			sportsman.appendChild(composition);
+			
+			Element position = document.createElement("position"); 
+			position.setTextContent(s.getPosition());
+			sportsman.appendChild(position);
 		
-		Element titles = document.createElement("titles");
-		titles.setTextContent(String.valueOf(s.getTitles()));
-		sportsman.appendChild(titles);
-		
-		Element sport = document.createElement("sport");
-		sport.setTextContent(s.getSport());
-		sportsman.appendChild(sport);
+			Element titles = document.createElement("titles");
+			titles.setTextContent(String.valueOf(s.getTitles()));
+			sportsman.appendChild(titles);
+					
+			Element sport = document.createElement("sport");
+			sport.setTextContent(s.getSport());
+			sportsman.appendChild(sport);
+
+			Element category = document.createElement("category"); 
+			category.setTextContent(s.getCategory());
+			sportsman.appendChild(category);
 		
 		 });
 		
 		Transformer transformer = TransformerFactory.newInstance().newTransformer(); 
 		DOMSource source = new DOMSource(document); 
-		StreamResult result = new StreamResult(new File(System.getProperty("user.dir") + File.separator + fileName));
-				transformer.transform(source, result);
-				System.out.println("Document " + fileName +  " saved");
+		StreamResult result = new StreamResult(file);
+		transformer.transform(source, result);
+		System.out.println("Document " + file.getName() +  " saved");
 		
 	}
 	

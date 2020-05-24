@@ -13,9 +13,9 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class SAXparser extends DefaultHandler{
 	
-	static File file = new File("src/model/list.xml");
+	//static File file = new File("src/model/list.xml");
 	
-	public static void mainSAXParser() throws ParserConfigurationException, SAXException, IOException{
+	public static void mainSAXParser(File file) throws ParserConfigurationException, SAXException, IOException{
 		SAXParserFactory factory = SAXParserFactory.newInstance();
 		SAXParser parser = factory.newSAXParser();
 		SAXparser saxp = new SAXparser();

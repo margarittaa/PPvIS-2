@@ -68,7 +68,7 @@ public class SearchDialog extends MainFrame{
 	}
 	
 	public static void showSearchResult(ArrayList<Sportsman> arr) {
-		JDialog resultDialog = new JDialog(frame, "Поиск записей");
+		JDialog resultDialog = new JDialog(frame, "Результат поиска");
 		resultDialog.setSize(900, 430);
 		resultDialog.setVisible(true);
 		resultDialog.setLocationRelativeTo(null);	

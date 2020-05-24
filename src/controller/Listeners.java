@@ -2,9 +2,11 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -17,23 +19,34 @@ import view.*;
 
 public class Listeners {
 	
+	static File currentDirectory = new File(System.getProperty("user.dir"));
+	static JFileChooser fileChooser = new JFileChooser(currentDirectory); 
+	
 	static ActionListener parseListener = new ActionListener(){
         @Override
-        public void actionPerformed(ActionEvent e) {             
+        public void actionPerformed(ActionEvent e) {  
+        	File file = null;
+        	int dialog = fileChooser.showOpenDialog(null);
+        	if(dialog == JFileChooser.APPROVE_OPTION) 
+        		file = fileChooser.getSelectedFile();
         	try {
-				SAXparser.mainSAXParser();
+				SAXparser.mainSAXParser(file);
 			} catch (ParserConfigurationException | SAXException | IOException e1) {
 				e1.printStackTrace();
 			}
-        	Controller.refreshTableModel(MainFrame.model);
+        	PageController.refreshTableModel();
         }
     };
 	
 	static ActionListener writeFileListener = new ActionListener(){
         @Override
-        public void actionPerformed(ActionEvent e) {             
+        public void actionPerformed(ActionEvent e) {     
+        	File file = null;
+        	int dialog = fileChooser.showSaveDialog(null);
+        	if(dialog == JFileChooser.APPROVE_OPTION) 
+        		file = fileChooser.getSelectedFile();
         	try {
-				DOMwriter.mainDOMwriter();
+				DOMwriter.mainDOMwriter(file);
 			} catch (ParserConfigurationException | TransformerFactoryConfigurationError
 					| TransformerException e1) {
 				e1.printStackTrace();
@@ -46,6 +59,7 @@ public class Listeners {
         public void actionPerformed(ActionEvent e) {             
         	AddDialog.create();
         }
+        
     };
     
     static ActionListener deleteListener  = new ActionListener(){
@@ -82,7 +96,7 @@ public class Listeners {
         	man.setCategory(AddDialog.fields[5].getText());
         	
         	Data.sportsmenList.add(man);
-        	Controller.pushDataToModel(man, MainFrame.model);
+        	PageController.refreshTableModel();
         	
         }
     };
@@ -104,17 +118,17 @@ public class Listeners {
         	wrongInput = false;
                 	
         	Data.sportsmenList.forEach(s -> {
-        		if((!FIO.equals("") || !sport.equals(""))
-        			&& titlesFrom.equals("") && titlesTo.equals("") && category.equals("")) {
+        		if((!FIO.isEmpty() || !sport.isEmpty())
+        			&& titlesFrom.isEmpty() && titlesTo.isEmpty() && category.isEmpty()) {
         			if(FIO.equals(s.getFIO()) || sport.equals(s.getSport()))
         				searchResult.add(s);
         		}
-        		else if(!titlesFrom.equals("") && !titlesTo.equals("") && category.equals("") && FIO.equals("") && sport.equals("")) {
+        		else if(!titlesFrom.isEmpty() && !titlesTo.isEmpty() && category.isEmpty() && FIO.isEmpty() && sport.isEmpty()) {
         			if(s.getTitles() > Integer.parseInt(titlesFrom) && s.getTitles() < Integer.parseInt(titlesTo))
         				searchResult.add(s);
         		}
-        		else if((!FIO.equals("") || !category.equals(""))
-            			&& titlesFrom.equals("") && titlesTo.equals("") && sport.equals("")) {
+        		else if((!FIO.isEmpty() || !category.isEmpty())
+            			&& titlesFrom.isEmpty() && titlesTo.isEmpty() && sport.isEmpty()) {
         				if(FIO.equals(s.getFIO()) || category.equals(s.getCategory()))
         				searchResult.add(s);
         		}
@@ -176,7 +190,7 @@ public class Listeners {
         	};
         	        
         	if(!wrongInput) {
-        		Controller.refreshTableModel(MainFrame.model);
+            	PageController.refreshTableModel();
         		if(counter == 0)
         			JOptionPane.showMessageDialog(DeleteDialog.deleteDialog, "Записи с указанными фильтрами не найдены");
         		else 

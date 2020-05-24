@@ -45,5 +45,5 @@ public class AddDialog extends MainFrame{
 		addRowButton.setBounds(150, 330, 100, 30);
 		addDialog.add(addRowButton);
 		
-		}
+	}
 }
